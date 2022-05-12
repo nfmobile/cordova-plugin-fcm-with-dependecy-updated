@@ -8,9 +8,9 @@ var configurations = require(`./configuration`);
 var PLATFORM = configurations.PLATFORM;
 
 //nabil test
-console.log('nabil before fs.chmodSync');
-fs.chmodSync('./scripts/install_ionic_dependencies.bat', '777');
-console.log('nabil after fs.chmodSync');
+//console.log('nabil before fs.chmodSync');
+//fs.chmodSync('./scripts/install_ionic_dependencies.bat', '777');
+//console.log('nabil after fs.chmodSync');
 
 function copyGoogleServiceFile(platform) {
     var googleServiceContent = helpers.getGoogleServiceContent(platform);
