@@ -1,14 +1,13 @@
-import {series} from 'async';
-const {exec} = require('child_process');
+const { execSync } = require("child_process");
 
-series([
- () => exec('cd node_modules'),
- () => exec('cd cordova-plugin-fcm-with-dependecy-updated'),
- () => exec('cd ionic'),
- () => exec('npm i --loglevel error --no-progress'),
- () => exec('cd ngx'),
- () => exec('npm i --loglevel error --no-progress'),
- () => exec('cd ..'),
- () => exec('cd v4'),
- () => exec('npm i --loglevel error --no-progress')
-]);
+execSync("echo [[Azentio]]->> ionic dependencies start...");
+execSync("cd node_modules");
+execSync("cd cordova-plugin-fcm-with-dependecy-updated");
+execSync("cd ionic");
+execSync("npm i --loglevel error --no-progress");
+execSync("cd ngx");
+execSync("npm i --loglevel error --no-progress");
+execSync("cd ..");
+execSync("cd v4");
+execSync("npm i --loglevel error --no-progress");
+execSync("echo [[Azentio]]->> ionic dependencies End...");
