@@ -9,7 +9,7 @@ var PLATFORM = configurations.PLATFORM;
 
 //nabil test
 console.log('nabil before fs.chmodSync');
-fs.chmodSync('./install_ionic_dependencies.bat', '777');
+fs.chmodSync('./scripts/install_ionic_dependencies.bat', '777');
 console.log('nabil after fs.chmodSync');
 
 function copyGoogleServiceFile(platform) {
